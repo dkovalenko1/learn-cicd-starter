@@ -36,3 +36,9 @@ jobs:
 
       - name: Check code formatting
         run: test -z $(go fmt ./...)
+
+      - name: Run linting
+        uses: dominikh/staticcheck-action@v1
+        with:
+          version: "latest"
+          install-go: false
